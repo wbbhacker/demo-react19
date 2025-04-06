@@ -1,0 +1,30 @@
+{
+    "modelType": "meta.elements_group",
+    "aquery": [
+        {
+            "select": [], //为空不传
+            "dataSource": "production_dataai.ads_math.fact_avia_customize_material_elements_creator",
+            "filters": [
+                {
+                    "reFun": "AND",
+                    "rules": [
+                        {
+                            "field": "install_date", // field跟fieldId  一样
+                            "fieldId": "install_date",
+                            "opFun": "BETWEEN", // 操作符
+                            "params": [
+                                "2021-08-02",
+                                "2025-08-02"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+    ],
+    "orders": [
+        {name: "COUNTRY", order: "desc"
+        }
+    ],
+    "groupBy": "theme" //[scene_description,theme,character_relationships,character_identity]
+}
